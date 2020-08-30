@@ -16,6 +16,6 @@ git init
 git add -A
 git commit -m 'deploy'
 
-git push -f "https://${access_token}@github.com/jianxiangxun/career.git" master
+git push -f "https://${access_token}@github.com/jianxiangxun/career.git" master:gh-pages
 # git push -f git@github.com:jianxiangxun/jianxiangxun.github.io.git master
 cd -
