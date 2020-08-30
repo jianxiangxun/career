@@ -1,8 +1,9 @@
 const sidebarMap = [
-  { title: '文章', dirname: 'article' },
-  { title: '最近阅读', dirname: 'diary' },
-  { title: '面试', dirname: 'interview' },
-  { title: 'Blog', dirname: 'blog' }
+  { title: '基础', dirname: 'basic' },
+  { title: '算法', dirname: 'algorithm' },
+  { title: '工程化', dirname: 'project' },
+  { title: '框架', dirname: 'framework' },
+  { title: '组件化', dirname: 'component' }
 ]
 
 module.exports = sidebarMap

@@ -1,9 +1,9 @@
 {
-  "name": "awesome-bookmarks",
+  "name": "career",
   "version": "1.0.0",
-  "description": "awesome-bookmarks",
+  "description": "career",
   "main": "index.js",
-  "author": "PanJiaChen",
+  "author": "xunjianxiang",
   "license": "ISC",
   "scripts": {
     "dev": "vuepress dev docs",

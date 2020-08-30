@@ -25,5 +25,7 @@ exports.inferSiderbars = () => {
       }
     ]
   })
+  console.log('啥玩意')
+  console.log(JSON.stringify(sidebar))
   return sidebar
 }

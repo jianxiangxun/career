@@ -1,9 +1,9 @@
 const utils = require('./utils')
 
 module.exports = {
-  title: 'awesome-bookmarks',
-  description: '个人收藏夹',
-  base: '/awesome-bookmarks/',
+  title: 'FE',
+  description: '故不积跬步，无以至千里',
+  base: '/',
   head: [
     [
       'link',
@@ -20,38 +20,45 @@ module.exports = {
         link: '/'
       },
       {
-        text: '库',
-        link: '/repository/'
+        text: '基础',
+        link: '/basic/'
       },
       {
-        text: '网站',
-        link: '/website/'
+        text: '框架',
+        link: '/framework/'
       },
       {
-        text: '最近阅读',
-        link: '/diary/read'
+        text: '组件化',
+        link: '/component/'
       },
       {
-        text: '文章',
-        link: '/article/'
-      },
-      // { text: '工具', link: 'https://google.com' },
-      {
-        text: '面试',
-        link: '/interview/'
+        text: '工程化',
+        link: '/project/'
       },
       {
-        text: '内推',
-        link: '/job/'
+        text: '算法',
+        link: '/algorithm/tree'
       },
       {
-        text: 'Blog',
-        link: '/blog/'
+        text: '移动端',
+        link: '/mobile/'
+      },
+      {
+        text: 'node',
+        link: '/node/'
       }
+      // {
+      //   text: '生涯',
+      //   link: '/career/'
+      // },
+      // {
+      //   text: '简历',
+      //   link: '/resume/'
+      // }
     ],
     sidebar: utils.inferSiderbars(),
     lastUpdated: '上次更新',
-    repo: 'PanJiaChen/awesome-bookmarks',
+    repo: 'jianxiangxun',
     editLinks: true,
     docsDir: 'docs',
     editLinkText: '在 GitHub 上编辑此页',
