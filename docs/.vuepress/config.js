@@ -3,7 +3,7 @@ const utils = require('./utils')
 module.exports = {
   title: 'FE',
   description: '故不积跬步，无以至千里',
-  base: '/',
+  base: '/career/',
   head: [
     [
       'link',
