@@ -6,33 +6,23 @@
 
 这里不太适合前端初学者，因为我面试的时候默认你至少有一定的前端基础了，我不会问你最基本的 html 有什么标签 `==`和`===`有什么区别
 
-[前端工程师手册](https://leohxj.gitbooks.io/front-end-database/content/html-and-css-basic/index.html)
+[前端该如何准备数据结构和算法？](https://juejin.im/post/6844903919722692621#heading-50)
 
-[30-seconds-of-interviews](https://github.com/fejes713/30-seconds-of-interviews)
+https://juejin.im/post/6844903919722692621#heading-50
 
-[front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook)
+https://leetcode-cn.com/
 
-[33-js-concepts](https://github.com/leonardomso/33-js-concepts)
+http://www.conardli.top/docs/algorithm/
 
-[33-js-concepts](https://github.com/stephentian/33-js-concepts) 中国国情版
+https://github.com/MisterBooo/LeetCodeAnimation/
 
-[Git 飞行规则](https://github.com/k88hudson/git-flight-rules/blob/master/README_zh-CN.md) 看了这个常规的 git 应该没什么问题了
+https://github.com/algorithm-visualizer/algorithm-visualizer/
 
-[node-interview](https://github.com/ElemeFE/node-interview/tree/master/sections/zh-cn)
+https://github.com/trekhleb/javascript-algorithms/
 
-[Node.js-Troubleshooting-Guide](https://github.com/aliyun-node/Node.js-Troubleshooting-Guide) Node.js 应用线上/线下故障、压测问题和性能调优指南手册
+https://github.com/azl397985856/leetcode
 
-[2018 大厂高级前端面试题汇总](https://github.com/yygmind/blog/issues/5)
-
-[Daily-Interview-Question](https://github.com/Advanced-Frontend/Daily-Interview-Question) 每天一道前端大厂面试题
-
-https://github.com/forthealllight/blog/issues
-
-[reverse-interview 反向面试](https://github.com/yifeikong/reverse-interview-zh)
-
-[JavaScript 深入系列](https://github.com/mqyqingfeng/Blog) 强烈推荐看一遍
-
-[Front-End-Interview-Notebook](https://github.com/CavsZhouyou/Front-End-Interview-Notebook) 比较基础适合实习生或者应届生看，可以快速的过一遍查漏补缺
+https://github.com/afatcoder/LeetcodeTop
 
 想成为一个好的前端工程师，光有强大的编程能力是远远不够的，还有很多软知识需要知道。
 
