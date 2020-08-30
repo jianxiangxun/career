@@ -2,7 +2,7 @@ const fs = require('fs')
 const TOC = require('markdown-toc')
 const { pathResolve, readFile } = require('./utils.js')
 
-const files = ['docs/node/README.md', 'docs/mobile/README.md']
+const files = ['docs/basic/README.md', 'docs/framework/README.md']
 const headerMd = 'scripts/README-base.md'
 
 async function generate() {
