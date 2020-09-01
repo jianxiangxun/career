@@ -37,24 +37,24 @@ module.exports = {
       },
       {
         text: '算法',
-        link: '/algorithm/tree'
+        link: '/algorithm/'
+      },
+      {
+        text: '⭐⭐⭐⭐⭐',
+        link: '/career/'
       },
       {
         text: '移动端',
         link: '/mobile/'
       },
       {
-        text: 'node',
+        text: 'Node',
         link: '/node/'
+      },
+      {
+        text: '⭐⭐⭐⭐⭐',
+        link: '/resume/'
       }
-      // {
-      //   text: '生涯',
-      //   link: '/career/'
-      // },
-      // {
-      //   text: '简历',
-      //   link: '/resume/'
-      // }
     ],
     sidebar: utils.inferSiderbars(),
     lastUpdated: '上次更新',

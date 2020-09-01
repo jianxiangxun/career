@@ -1,33 +1,25 @@
 # 汇总
 
-::: tip
-你的简历是自己工作的答卷，项目经历是你给面试官出的考纲。所以，我的面试一定是与我的简历、工作经历相关的，一些面试题并不一定适用于任何人，但是你可以从中了解他们考察的点，以及侧重点。基础知识可以查漏补缺。
-:::
-
-这里不太适合前端初学者，因为我面试的时候默认你至少有一定的前端基础了，我不会问你最基本的 html 有什么标签 `==`和`===`有什么区别
+## JavaScript 实现数据结构和算法
 
 [前端该如何准备数据结构和算法？](https://juejin.im/post/6844903919722692621#heading-50)
 
-https://juejin.im/post/6844903919722692621#heading-50
+[用 JavaScript 实现的算法和数据结构](http://www.conardli.top/docs/)
 
-https://leetcode-cn.com/
+[JavaScript 实现的算法](https://github.com/trekhleb/javascript-algorithms/)
 
-http://www.conardli.top/docs/algorithm/
+## 算法动画演示
 
-https://github.com/MisterBooo/LeetCodeAnimation/
+[算法动画演示 GitHub](https://github.com/MisterBooo/LeetCodeAnimation/)
 
-https://github.com/algorithm-visualizer/algorithm-visualizer/
+[算法动画演示 blog](https://www.cxyxiaowu.com/)
 
-https://github.com/trekhleb/javascript-algorithms/
+[算法可视化演示](https://github.com/algorithm-visualizer/algorithm-visualizer/)
 
-https://github.com/azl397985856/leetcode
+## 题解、面试题
 
-https://github.com/afatcoder/LeetcodeTop
+[各大公司算法题目](https://github.com/afatcoder/LeetcodeTop)
 
-想成为一个好的前端工程师，光有强大的编程能力是远远不够的，还有很多软知识需要知道。
+[LeetCode 题解](https://github.com/azl397985856/leetcode)
 
-学会与人沟通。
-
-前端是一个承上启下的工作，在实际业务之中你除了要面对代码之外还需要对接 UI、产品、后端和其它前端有时候经常也会和运营啊广告销售打交道。因此怎么与其他角色很好的沟通也是一个非常重要的能力，代码写的再好，但不满足需求也是白搭。
-
-需求明确再动手；发现问题尽快解决；意见分歧不要拒绝沟通；学会换位思考，不要总站在自己的角度想当然；
+[labuladong 的算法小抄](https://github.com/labuladong/fucking-algorithm)
