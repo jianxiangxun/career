@@ -23,3 +23,7 @@
 [LeetCode 题解](https://github.com/azl397985856/leetcode)
 
 [labuladong 的算法小抄](https://github.com/labuladong/fucking-algorithm)
+
+## 方法
+
+链表中的双指针应用

@@ -41,7 +41,7 @@ module.exports = {
       },
       {
         text: '⭐⭐⭐⭐⭐',
-        link: '/career/'
+        link: '/record/'
       },
       {
         text: '移动端',
