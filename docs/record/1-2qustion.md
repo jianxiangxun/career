@@ -1,3 +1,5 @@
+# 问题记录
+
 ## mysql
 
 Q:解决 MAC 电脑 Sequel Pro encountered an unexpected error 问题
