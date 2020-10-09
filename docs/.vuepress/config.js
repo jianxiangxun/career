@@ -39,10 +39,10 @@ module.exports = {
         text: '算法',
         link: '/algorithm/'
       },
-      {
-        text: '⭐⭐⭐⭐⭐',
-        link: '/record/'
-      },
+      // {
+      //   text: '⭐⭐⭐⭐⭐',
+      //   link: '/record/'
+      // },
       {
         text: '移动端',
         link: '/mobile/'
@@ -52,8 +52,12 @@ module.exports = {
         link: '/node/'
       },
       {
+        text: '英语',
+        link: '/english/'
+      },
+      {
         text: '⭐⭐⭐⭐⭐',
-        link: '/resume/'
+        link: '/record/'
       }
     ],
     sidebar: utils.inferSiderbars(),
