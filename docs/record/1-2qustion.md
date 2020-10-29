@@ -62,24 +62,23 @@ echo \$SHELL
 
 ## Android stutio
 
-![873690ef19a9308f2431ca1b1992869b.png](evernotecid://9C5AAC4E-C6EE-4474-B33A-6ABCAFD93386/appyinxiangcom/25870804/ENResource/p45)
-
 ## homebrew
 
 /bin/zsh -c "\$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
 
 https://zhuanlan.zhihu.com/p/111014448
 
-## 访问网站慢的问题
+## GitHub
 
 github,添加 DNS 不好用
+
 https://cloud.tencent.com/developer/article/1600353
+
 github 访问慢，`github.com`替换成`github.com.cnpmjs.org`
 
-cocoapods
-https://mirrors.tuna.tsinghua.edu.cn/help/CocoaPods/
+## cocoapods
 
-github:码云
+https://mirrors.tuna.tsinghua.edu.cn/help/CocoaPods/
 
 ## node sass
 

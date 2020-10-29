@@ -1,7 +1,3 @@
----
-sidebar: auto
----
-
 # 英语
 
 [专为程序员编写的英语学习指南](https://a-programmers-guide-to-english.harryyu.me/)

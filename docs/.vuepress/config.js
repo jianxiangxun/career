@@ -39,22 +39,7 @@ module.exports = {
         text: '算法',
         link: '/algorithm/'
       },
-      // {
-      //   text: '⭐⭐⭐⭐⭐',
-      //   link: '/record/'
-      // },
-      {
-        text: '移动端',
-        link: '/mobile/'
-      },
-      {
-        text: 'Node',
-        link: '/node/'
-      },
-      {
-        text: '英语',
-        link: '/english/'
-      },
+
       {
         text: '⭐⭐⭐⭐⭐',
         link: '/record/'
