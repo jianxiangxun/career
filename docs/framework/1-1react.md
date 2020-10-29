@@ -1,5 +1,11 @@
 # REACT
 
+[React 性能优化大挑战：一次理解 Immutable data 跟 shouldComponentUpdate](https://mp.weixin.qq.com/s/oxy3yXipelNKYKi7t2KbeA)
+
+[React 中组件间通信的几种方式](https://www.jianshu.com/p/fb915d9c99c4)
+
+[Airbnb 爱彼迎房源详情页中的 React 性能优化](https://zhuanlan.zhihu.com/p/44404836)
+
 [大厂面试中遇到的几十道 webpack 与 react 面试题](https://juejin.im/post/6844904031735775245)
 
 [详解 useCallback & useMemo](https://juejin.im/post/6844904101445124110)
