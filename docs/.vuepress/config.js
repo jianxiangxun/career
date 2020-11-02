@@ -35,10 +35,6 @@ module.exports = {
         text: '工程化',
         link: '/project/'
       },
-      {
-        text: '算法',
-        link: '/algorithm/'
-      },
 
       {
         text: '⭐⭐⭐⭐⭐',
