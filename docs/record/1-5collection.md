@@ -61,3 +61,5 @@
 [什么是真正的程序员](http://www.cnblogs.com/xueweihan/p/5220513.html)
 
 [如何在疲劳的 JS 世界中持续学习](https://juejin.im/post/5ae97bd05188256719521ae0?utm_medium=fe&utm_source=weixinqun)
+
+[Airbnb 爱彼迎的工程师文化](https://zhuanlan.zhihu.com/p/40484294)

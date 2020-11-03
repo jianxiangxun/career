@@ -34,6 +34,12 @@
 
 [Immutable 详解及 React 中实践 #3](https://github.com/camsong/blog/issues/3)
 
+[React Tips (2) - Reselect](https://zhuanlan.zhihu.com/p/29415032)
+
+[Immutable.js 与 React,Redux 及 reselect 的实践](https://zhuanlan.zhihu.com/p/29370325)
+
+[关于 react, redux, react-redux 和 reselect 的一些思考](https://zhuanlan.zhihu.com/p/33985606)
+
 ## 性能优化
 
 [React 性能优化大挑战：一次理解 Immutable data 跟 shouldComponentUpdate](https://mp.weixin.qq.com/s/oxy3yXipelNKYKi7t2KbeA)
@@ -85,6 +91,10 @@
 
 [React 性能测量和分析](https://juejin.im/post/6844903869378641933)
 
+[React + Redux 性能优化（二）工具篇： Immutablejs](https://zhuanlan.zhihu.com/p/34802753)
+
+[项目实战中 React 性能优化](https://zhuanlan.zhihu.com/p/93268933)
+
 ## 项目
 
 > [react-admin](https://marmelab.com/react-admin/Readme.html)，定制化的后台管理系统。
@@ -94,6 +104,8 @@
 - auth
 - data provider
 - crud
+
+[react hooks+redux+immutable.js 仿网易云音乐打造精美 webApp](https://zhuanlan.zhihu.com/p/77782049)
 
 ## 面试题
 
