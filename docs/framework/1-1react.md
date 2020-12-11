@@ -95,6 +95,8 @@
 
 [项目实战中 React 性能优化](https://zhuanlan.zhihu.com/p/93268933)
 
+[21 项优化 React App 性能的技术](https://juejin.im/post/6844903881676161031#heading-12)
+
 ## 项目
 
 > [react-admin](https://marmelab.com/react-admin/Readme.html)，定制化的后台管理系统。
