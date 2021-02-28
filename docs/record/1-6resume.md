@@ -1,8 +1,20 @@
 # 面试相关
 
+[前端知识清单](http://www.conardli.top/blog/article/%E7%BB%BC%E5%90%88/%E3%80%90%E8%87%AA%E6%A3%80%E3%80%91%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%B8%85%E5%8D%95.html)
+
+[前端进阶之道](https://yuchengkai.cn/home/)
+
+[花裤衩](https://panjiachen.github.io/awesome-bookmarks/repository/)
+
+[每日一题](https://muyiy.cn/question/)
+
+[前端进阶](http://www.conardli.top/blog/article/)
+
+[牛客网](https://www.nowcoder.com/activity/oj?tab=3)
+
 ## 基础
 
-- JavaScript
+- JavaScript,做题
 - typescript
 - es6
 - http
@@ -14,17 +26,33 @@
 
 ## 工程化
 
+- 搭建一个聊天项目，react、Vue
 - webpack 使用、原理
 - 相关脚手架工具的使用、原理
 - [项目 matterMost](https://github.com/mattermost?type=source)
 
-## 问题
+## 性能优化方面做过的事情
+
+- 网络方面
+- webpack 方面
+- 代码层面
+- 测量指标用到的工具
+
+## 框架方面
+
+- 原理
+- 框架之间的区别
+-
+
+## 提出的问题
 
 - 踩过的坑
-- 性能优化方面的问题
+- 遇到过的不好解决的问题
 - 写过哪些组件
 - 做过哪些项目
-- 遇到过的不好解决的问题
+
+## 我想问的问题
+
 - 你有什么想问的吗（技术、人力）
 
 ## 面经

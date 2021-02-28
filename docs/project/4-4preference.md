@@ -43,3 +43,5 @@
 
 - performance
 - Lighthouse
+
+[性能](https://yuchengkai.cn/docs/frontend/performance.html)
