@@ -24,5 +24,3 @@
 ## 组件库源码
 
 [react-component](https://github.com/react-component?type=source)
-
-### 样式 less 编写

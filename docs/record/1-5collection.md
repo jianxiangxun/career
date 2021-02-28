@@ -10,8 +10,6 @@
 
 ### 合集
 
-[前端工作学习相关网站收集整理](https://juejin.im/post/6844903863795843085)
-
 [2019 年前端大事件回顾：流年笑掷，未来可](https://juejin.im/post/6844904017819090957)
 
 [一个合格(优秀)的前端都应该阅读这些文章](https://juejin.im/post/6844903896637259784)
@@ -22,23 +20,9 @@
 
 [2018 上半年掘金微信群日报优质文章合集：前端篇](https://juejin.im/post/6844903632488366088)
 
-[掘金高赞文章合集](https://gitee.com/jianxiangxun/juejin-spider/raw/master/src/assets/calcDianzanRank/%E7%82%B9%E8%B5%9Erank.md)
-
 [一个合格(优秀)的前端都应该阅读这些文章](https://juejin.im/post/6844903896637259784#heading-4)
 
-[前端进阶必经之路（一）：1.2w 字深入理解 JavaScript26 个核心概念](https://juejin.im/post/6865184344990810126#heading-87)
-
-[「灵魂之作」2020 斩获 30 道高频 JS 手撕面试题](https://juejin.im/post/6870319532955828231#heading-42)
-
-[JavaScript 专题系列 20 篇正式完结](https://juejin.im/post/6844903506017517582)
-
-[每个 JavaScript 工程师都应懂的 33 个概念](https://github.com/stephentian/33-js-concepts)
-
-### 面经
-
-[2020 年中大厂前端面试总结](https://juejin.im/post/6865525477465931783)
-
-[前端面试考点多？看这些文章就够了（2019 年 6 月更新版）](https://juejin.im/post/6844903577220349959#heading-24)
+[掘金高赞文章合集](https://gitee.com/jianxiangxun/juejin-spider/raw/master/src/assets/calcDianzanRank/%E7%82%B9%E8%B5%9Erank.md) ⭐
 
 ### 方法
 

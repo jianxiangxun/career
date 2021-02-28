@@ -37,7 +37,7 @@ module.exports = {
       },
 
       {
-        text: '⭐⭐⭐⭐⭐',
+        text: '汇总⭐',
         link: '/record/'
       }
     ],
