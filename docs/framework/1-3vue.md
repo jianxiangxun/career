@@ -2,6 +2,8 @@
 
 [vue 文章合集](https://juejin.im/collection/6845244138305093646)
 
+[vue-element-admin](https://panjiachen.github.io/vue-element-admin-site/zh/guide/#%E5%8A%9F%E8%83%BD)
+
 ## 概念
 
 [ 20 个 Vue 技巧](https://juejin.im/post/6872128694639394830#heading-22)⭐

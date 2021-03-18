@@ -15,3 +15,5 @@
 - 字面量的概念，[字面量类型](https://jkchao.github.io/typescript-book-chinese/typings/literals.html)
 - 工具类型，[Utility Types](https://www.typescriptlang.org/docs/handbook/utility-types.html#omittype-keys)
 - [练习 typescript，playground](https://www.typescriptlang.org/play?#code/JYOwLgpgTgZghgYwgAgMJzASRDA9sgbwChlk4BzCALmRAFcBbAI2gG4TkmoIIATGgM5goocuwC+RImACeABxTowAOTgMUAXmQAiBsBgwZ25AB8dTXCIHGzuy7269t7IglwghyBBgE0AShBuULwAPEqq6gA0aBjYeAB8yFrEpHoGMjQEZJQ0AIwADNFcPPw6AArQAsBwIMbikRwWVpnZ1MgArEXcfDTaALJwoIq47nUNqfaOLRRtuQBsXSW9AEIiYMACABbIAMqblmCbg1BjROIu3mACAHRNG+wA9A-IAHoA-EA)
+
+- 练习题 [](https://juejin.cn/post/6877469976446533645) [](https://juejin.cn/post/6885177054979948558)
