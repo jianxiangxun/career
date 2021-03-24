@@ -24,6 +24,8 @@
 
 [掘金高赞文章合集](https://gitee.com/jianxiangxun/juejin-spider/raw/master/src/assets/calcDianzanRank/%E7%82%B9%E8%B5%9Erank.md) ⭐
 
+[前端教程 & 开发模块化 / 规范化 / 工程化 / 优化 & 工具 / 调试 & 值得关注的博客 / Git & 面试 - 资源汇总](https://segmentfault.com/a/1190000007062464)
+
 ### 方法
 
 [我是如何将业务代码写优雅的](https://juejin.im/post/6844903833546702856)
