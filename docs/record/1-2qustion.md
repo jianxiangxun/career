@@ -83,3 +83,7 @@ https://mirrors.tuna.tsinghua.edu.cn/help/CocoaPods/
 ## node sass
 
 https://www.cnblogs.com/renxiaoren/p/11903792.html
+
+## websocket
+
+create-react-app 中引用 websocket 时，代理时路径中不能只包含/websocket

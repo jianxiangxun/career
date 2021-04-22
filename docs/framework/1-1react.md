@@ -14,6 +14,8 @@
 - React 打算做更多优化,React 需要自己模拟一套事件冒泡的机制
 - React 打算干预事件的分发
 
+[useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
+
 [React 中组件间通信的几种方式](https://www.jianshu.com/p/fb915d9c99c4)
 
 [详解 useCallback & useMemo](https://juejin.im/post/6844904101445124110)
@@ -40,7 +42,11 @@
 
 [关于 react, redux, react-redux 和 reselect 的一些思考](https://zhuanlan.zhihu.com/p/33985606)
 
+[「react 进阶」一文吃透 react-hooks 原理](https://juejin.cn/post/6944863057000529933)
+
 ## 性能优化
+
+[React 性能优化完全指南，将自己这几年的心血总结成这篇！](https://mp.weixin.qq.com/s/p4MGOhEa5MoGMU1MscjAJw)
 
 [React 性能优化大挑战：一次理解 Immutable data 跟 shouldComponentUpdate](https://mp.weixin.qq.com/s/oxy3yXipelNKYKi7t2KbeA)
 
