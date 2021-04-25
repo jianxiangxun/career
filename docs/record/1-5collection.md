@@ -1,4 +1,4 @@
-# 文章
+# 收集
 
 ## 好文章
 
@@ -49,3 +49,15 @@
 [如何在疲劳的 JS 世界中持续学习](https://juejin.im/post/5ae97bd05188256719521ae0?utm_medium=fe&utm_source=weixinqun)
 
 [Airbnb 爱彼迎的工程师文化](https://zhuanlan.zhihu.com/p/40484294)
+
+## 技术类网站
+
+[www.echojs.com/](www.echojs.com/)
+
+[medium.com/dailyjs/](medium.com/dailyjs/)
+
+[frontendfront.com/](frontendfront.com/)
+
+[前端工作学习相关网站收集整理](https://juejin.im/post/6844903863795843085)
+
+## 博客

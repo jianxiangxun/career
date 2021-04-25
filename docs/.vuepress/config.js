@@ -28,16 +28,12 @@ module.exports = {
         link: '/framework/'
       },
       {
-        text: '组件化',
-        link: '/component/'
-      },
-      {
         text: '工程化',
         link: '/project/'
       },
 
       {
-        text: '汇总⭐',
+        text: '⭐⭐⭐⭐⭐',
         link: '/record/'
       }
     ],

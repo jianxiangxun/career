@@ -1,4 +1,4 @@
-# VUE
+# Vue
 
 [vue 文章合集](https://juejin.im/collection/6845244138305093646)
 
@@ -43,3 +43,11 @@
 [30 道 Vue 面试题](https://juejin.im/post/6844903918753808398)
 
 ## 问题&坑
+
+## 组件库
+
+- https://element.eleme.cn/#/zh-CN
+- https://vant-contrib.gitee.io/vant/#/zh-CN/
+- https://youzan.github.io/vant-weapp/#/intro
+- https://vuetifyjs.com/zh-Hans/getting-started/quick-start/
+- https://vue.ant.design/
