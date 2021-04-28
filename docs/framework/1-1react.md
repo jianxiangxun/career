@@ -159,3 +159,14 @@
 - 测试写法有问题，大量写了 setTimeout 的测试永远不会失败
 
 [git 地址](https://github.com/jianxiangxun/checkbox)
+
+### tabs
+
+#### css
+
+- css 按照层级结构去书写，清晰；命名按照层级去命名，以`-`连接，如`rc-tabs-tab-nav-list`
+- css 分文件，index 写主要的结构，附加的写到单独的文件，如样式`positiion`,`type中的card样式`,`size`；功能`dropdown`。。。
+- 前缀变量，如`rc-tabs`,`rc-checkbox`
+- tab 滑动时，不用滚动条`overflow:hidden`,监控 on-wheel 事件通过 **_transform-translate_** 改变元素位置，**_提高性能_**
+- `offsetHeight`,`offsetWidth`等的大量使用
+- 样式文件不直接引入，放到单独的 style 文件夹中，在入口 index 中引入所有组件的样式文件，最终可以一次导入
