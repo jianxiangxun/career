@@ -2,6 +2,20 @@
 
 ## 概念
 
+### hook
+
+[详解 useCallback & useMemo](https://juejin.im/post/6844904101445124110)
+
+[useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/) ⭐
+
+[深入浅出 React Hooks](https://juejin.im/post/6844903858662014983#heading-24)
+
+[「react 进阶」一文吃透 react-hooks 原理](https://juejin.cn/post/6944863057000529933)
+
+[在 React 项目中全量使用 Hooks](https://juejin.im/post/6844904093824073742)
+
+### 其他
+
 [谈谈 React 事件机制和未来(react-events)](https://zhuanlan.zhihu.com/p/78669634)
 
 > 事件委托、合成事件、触发优先级
@@ -14,13 +28,7 @@
 - React 打算做更多优化,React 需要自己模拟一套事件冒泡的机制
 - React 打算干预事件的分发
 
-[useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/)
-
 [React 中组件间通信的几种方式](https://www.jianshu.com/p/fb915d9c99c4)
-
-[详解 useCallback & useMemo](https://juejin.im/post/6844904101445124110)
-
-[在 React 项目中全量使用 Hooks](https://juejin.im/post/6844904093824073742)
 
 [TypeScript 在 React 中使用总结](https://juejin.im/post/6844903684422254606#heading-2)⭐
 
@@ -30,19 +38,7 @@
 
 [聊一聊我对 React Context 的理解以及应用](https://juejin.im/post/5a90e0545188257a63112977)
 
-[深入浅出 React Hooks](https://juejin.im/post/6844903858662014983#heading-24)
-
 [从一个需求出发，聊聊 useRef 三兄弟](https://juejin.im/post/6888616874171432973)
-
-[Immutable 详解及 React 中实践 #3](https://github.com/camsong/blog/issues/3)
-
-[React Tips (2) - Reselect](https://zhuanlan.zhihu.com/p/29415032)
-
-[Immutable.js 与 React,Redux 及 reselect 的实践](https://zhuanlan.zhihu.com/p/29370325)
-
-[关于 react, redux, react-redux 和 reselect 的一些思考](https://zhuanlan.zhihu.com/p/33985606)
-
-[「react 进阶」一文吃透 react-hooks 原理](https://juejin.cn/post/6944863057000529933)
 
 ## 性能优化
 
@@ -105,15 +101,30 @@
 
 ## 项目
 
-> [react-admin](https://marmelab.com/react-admin/Readme.html)，定制化的后台管理系统。
+- [react-admin](https://marmelab.com/react-admin/Readme.html)，定制化的后台管理系统。
 
-- layout
-- theme
-- auth
-- data provider
-- crud
+  - layout
+  - theme
+  - auth
+  - data provider
+  - crud
 
-[react hooks+redux+immutable.js 仿网易云音乐打造精美 webApp](https://zhuanlan.zhihu.com/p/77782049)
+- [react hooks+redux+immutable.js 仿网易云音乐打造精美 webApp](https://github.com/sanyuan0704/react-cloud-music)
+
+  - diff 原理
+  - immutable + purecomponent/memo 优化的原理
+  - betterscroll 使用
+  - transform
+  - react-transition-group 使用
+  - styled-components
+  - swiper
+  - React.lazy
+  - react-lazyload 插件
+
+- [Joplin - an open source note taking and to-do application with synchronization capabilities for every platform](https://github.com/laurent22/joplin)
+
+- [Mattermost is an open source, self-hosted Slack-alternative from mattermost.org](https://github.com/mattermost/mattermost-webapp)
+  - [开发文档](https://developers.mattermost.com/contribute/getting-started/)
 
 ## 面试题
 
@@ -170,3 +181,23 @@
 - tab 滑动时，不用滚动条`overflow:hidden`,监控 on-wheel 事件通过 **_transform-translate_** 改变元素位置，**_提高性能_**
 - `offsetHeight`,`offsetWidth`等的大量使用
 - 样式文件不直接引入，放到单独的 style 文件夹中，在入口 index 中引入所有组件的样式文件，最终可以一次导入
+
+## 状态管理
+
+### redux
+
+- createStore
+  - 返回 state、subscribe、dispatch
+- combineReducers
+- applyMiddleware
+  - 调用 compose
+
+### 不可变对象
+
+[关于 react, redux, react-redux 和 reselect 的一些思考](https://zhuanlan.zhihu.com/p/33985606)
+
+[Immutable 详解及 React 中实践 #3](https://github.com/camsong/blog/issues/3)
+
+[React Tips (2) - Reselect](https://zhuanlan.zhihu.com/p/29415032)
+
+[Immutable.js 与 React,Redux 及 reselect 的实践](https://zhuanlan.zhihu.com/p/29370325)
