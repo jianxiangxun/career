@@ -101,13 +101,18 @@
 
 ## 项目
 
-- [react-admin](https://marmelab.com/react-admin/Readme.html)，定制化的后台管理系统。
+- [react-admin，marmelab 定制化的后台管理系统。](https://marmelab.com/react-admin/Readme.html)
 
   - layout
   - theme
   - auth
   - data provider
   - crud
+
+- [react-admin system solution : react 后台管理系统解决方案](https://github.com/yezihaohao/react-admin)
+
+  - 路由的编程式写法，包含嵌套
+  - 菜单栏根据路由生成，权限控制
 
 - [react hooks+redux+immutable.js 仿网易云音乐打造精美 webApp](https://github.com/sanyuan0704/react-cloud-music)
 
@@ -147,6 +152,8 @@
 
 [react-component](https://github.com/react-component?type=source)
 
+- ant-design 在 react-component 组件之上包装一层，加上一些公用的属性，如`size`,`diriction`,`position`等
+
 [react 组件库](https://github.com/brillout/awesome-react-components#ui-navigation)
 
 ### checkbox
@@ -181,6 +188,14 @@
 - tab 滑动时，不用滚动条`overflow:hidden`,监控 on-wheel 事件通过 **_transform-translate_** 改变元素位置，**_提高性能_**
 - `offsetHeight`,`offsetWidth`等的大量使用
 - 样式文件不直接引入，放到单独的 style 文件夹中，在入口 index 中引入所有组件的样式文件，最终可以一次导入
+
+### progress
+
+- 圆形 circle 由 SVG 实现
+
+### slider
+
+- on
 
 ## 状态管理
 
