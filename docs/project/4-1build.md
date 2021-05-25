@@ -2,6 +2,15 @@
 
 ## webpack
 
+[webpack 中那些最易混淆的 5 个知识点](https://juejin.cn/post/6844904007362674701#heading-15)
+
+[webpack 敲得代码就不香了(近万字实战)](https://juejin.cn/post/6844904031240863758#heading-30)
+
+- 配置缓存,提高编译速度
+- externals
+
+原理：
+
 ## 安全 safety
 
 [前端安全总结](https://github.com/YvetteLau/Blog/tree/master/Security)
@@ -69,3 +78,33 @@
 [用微前端的方式搭建类单页应用](https://juejin.im/post/6844903671969349645#heading-2)
 
 [Bifrost 微前端框架及其在美团闪购中的实践](https://tech.meituan.com/2019/12/26/meituan-bifrost.html)
+
+## create-react-app
+
+`npx create-react-app my-app --use-npm`指定安装工具，默认`yarn`
+
+`browserslist`分为`production`,`development`
+
+css-module 的使用,通过类名调用，不会引起冲突
+
+```css
+/* Button.module.css */
+.error {
+  background-color: red;
+}
+```
+
+```js
+import React, { Component } from 'react'
+import styles from './Button.module.css' // Import css modules stylesheet as styles
+import './another-stylesheet.css' // Import regular stylesheet
+
+class Button extends Component {
+  render() {
+    // reference as a js object
+    return <button className={styles.error}>Error Button</button>
+  }
+}
+```
+
+多入口怎么配置

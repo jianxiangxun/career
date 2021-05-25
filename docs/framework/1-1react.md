@@ -129,7 +129,25 @@
 - [Joplin - an open source note taking and to-do application with synchronization capabilities for every platform](https://github.com/laurent22/joplin)
 
 - [Mattermost is an open source, self-hosted Slack-alternative from mattermost.org](https://github.com/mattermost/mattermost-webapp)
+
   - [开发文档](https://developers.mattermost.com/contribute/getting-started/)
+
+- 内部移动端聊天项目（问题记录）
+  - hook 的写法，哪些变量应该放到`useRef`中，那个可以直接声明，尤其`new`出来的对象
+  - websocket 在开发环境，路径不能只是，会与 wds(webpack dev server)产生冲突？
+  - 功能尽量拆分出单独的方法，调用方法
+
+* 做一个项目，开始时做设计，结束做总结：
+  - 项目中用到的技术点，组件
+  - 开发中可能遇到的技术难点
+  - 整体的项目结构，工程化需要用到的工具
+  - 会用到哪些组件、手写还是引用第三方开源
+  - 工具方法的提炼，也可以写成 hook 的形式
+  - CSS 的组织，需要用到哪些变量
+  - hooks(useState,useEffect,useRef...)只能用到函数式组件的内部，或者自定义 hook 中
+  - 可以通过路由组织页面结构
+  - 完成后总结遇到的问题，进度慢的原因，避免边做边想，陷入细节，做的过程中发现方向性问题
+  -
 
 ## 面试题
 
@@ -157,6 +175,37 @@
 [react 组件库](https://github.com/brillout/awesome-react-components#ui-navigation)
 
 ### checkbox
+
+#### ant-design 实现的 CheckBox
+
+- [rc-checkbox](https://github.com/react-component/checkbox)
+
+  - 当从 props 中获取值作为 state 时，可以使用 getDerivedStateFromProps
+  - onChange 事件的处理
+  - classnames 处理 class 名称，命名规则按照（前缀+层级+状态/形状。。。），常用的如`prefix`,`wrapper`,`inner`,`item`...
+  -
+
+- [antd-checkbox](https://github.com/ant-design/ant-design/tree/master/components/checkbox)
+
+  - typescript 的使用
+    - `React.CSSProperties`,`React.MouseEventHandler<HTMLElement>`,`React.KeyboardEventHandler<HTMLElement>`
+  - group(关键的两步，**_registerValue_**,**_toggleOption_**)
+
+    - 主要的信息都通过`context`传递给子组件,`toggleOption`,`value`,`disabled`,`name`,`registerValue`,`cancelValue`,
+    - 接收到的初始`value`数组，作为初始值出传递给`useState`
+    - `toggleOption`更新`CheckBox`是否选中，暴露给用户的`onChange`接口 API 也在该方法中调用，api 接受`value`数组，并被`registeredValues`过滤过，保证值对应的组件在页面上
+    - `registerValue`、`cancelValue`传递给子组件，注册或者取消注册子组件，当删除或者新增的时候调用
+    - 通过 options 生成对应的一个或者多个`CheckBox`
+    - 组件通过 memo 包装了一层
+
+  - CheckBox
+    - 对于在`group`中使用的`CheckBox`，第一次渲染完成，判断是否有传递过来的`registerValue`,有则调用注册当前`CheckBox`
+    - 对于在`group`中使用的`CheckBox`，当`value`变化并且与之前的值不相等，重新`registerValue`
+    - 对于在`group`中使用的`CheckBox`，在`props`的`onChange`方法中调用 **_`toggleOption`_** ,单独使用 CheckBox 时直接调用`onChange`
+    - 单独使用`CheckBox`时，透传大部分`props`，其他属性如`checked`结合`ClassName`生成对应的`ClassName`
+    - CheckBox 在 rc-checkbox 基础上包装一层`label`
+
+#### 自己实现的 CheckBox
 
 [git 地址](https://github.com/jianxiangxun/checkbox)
 
@@ -189,14 +238,17 @@
 
 ### tabs
 
-#### css
-
-- css 按照层级结构去书写，清晰；命名按照层级去命名，以`-`连接，如`rc-tabs-tab-nav-list`
-- css 分文件，index 写主要的结构，附加的写到单独的文件，如样式`positiion`,`type中的card样式`,`size`；功能`dropdown`。。。
-- 前缀变量，如`rc-tabs`,`rc-checkbox`
-- tab 滑动时，不用滚动条`overflow:hidden`,监控 on-wheel 事件通过 **_transform-translate_** 改变元素位置，**_提高性能_**
-- `offsetHeight`,`offsetWidth`等的大量使用
-- 样式文件不直接引入，放到单独的 style 文件夹中，在入口 index 中引入所有组件的样式文件，最终可以一次导入
+- css
+  - css 按照层级结构去书写，清晰；命名按照层级去命名，以`-`连接，如`rc-tabs-tab-nav-list`
+  - css 分文件，index 写主要的结构，附加的写到单独的文件，如样式`positiion`,`type中的card样式`,`size`；功能`dropdown`。。。
+  - 前缀变量，如`rc-tabs`,`rc-checkbox`
+  - tab 滑动时，不用滚动条`overflow:hidden`,监控`wheel`事件通过 **_transform:(translate)_** 改变元素位置，**提高性能**
+  - `offsetHeight`,`offsetWidth`等的大量使用
+  - 样式文件不直接引入，放到单独的 style 文件夹中，在整个项目入口 `index` 中引入所有组件的样式文件，最终可以一次导入
+- hooks
+  - 通过改变值，把值作为 effect 的依赖，从而来做对应的操作
+- 知识点
+-
 
 ### progress
 
@@ -205,6 +257,10 @@
 ### slider
 
 - on
+
+### dropdown
+
+### menu
 
 ## 状态管理
 
