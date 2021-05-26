@@ -2,6 +2,14 @@
 
 ## babel
 
+[Babel 用户手册](https://github.com/jamiebuilds/babel-handbook/blob/master/translations/zh-Hans/user-handbook.md)
+
+[不容错过的 Babel7 知识](https://juejin.cn/post/6844904008679686152#refetch)
+
+[深入浅出 Babel 上篇：架构和原理 + 实战](https://juejin.cn/post/6844903956905197576)
+
+[深入浅出 Babel 下篇：既生 Plugin 何生 Macros](https://juejin.cn/post/6844903961820921869#refetch)
+
 ## eslint
 
 - 分为几部分,`extends`,`plugins`,,`rules`,
