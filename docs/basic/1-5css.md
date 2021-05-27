@@ -10,6 +10,8 @@
 
 [1.5 万字 CSS 基础拾遗（核心知识、常见需求）](https://mp.weixin.qq.com/s/fV5friirT_3Oemvaunjemw)
 
+postcssPxToViewport 可以设置不转换的内容，通过选择器
+
 ### 浮动
 
 > 参考文章 [可能是最全面最易懂的解析前端浮动的文章](https://juejin.im/post/6844903689094692871)
