@@ -6,6 +6,8 @@
 
 [webpack 敲得代码就不香了(近万字实战)](https://juejin.cn/post/6844904031240863758#heading-30)
 
+[webpack 4.x 常用配置汇总](https://github.com/wangfupeng1988/read-notes/blob/master/video/webpack4.md)
+
 - 配置缓存,提高编译速度
 - externals
 

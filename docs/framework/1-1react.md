@@ -4,45 +4,90 @@
 
 ### hook
 
+- Basic Hooks
+  - useState
+  - useEffect
+  - useContext
+- Additional Hooks
+  - useReducer
+  - useCallback
+  - useMemo
+  - useRef
+  - useImperativeHandle
+  - useLayoutEffect
+  - useDebugValue
+
 [详解 useCallback & useMemo](https://juejin.im/post/6844904101445124110)
 
+- 将 useCallback 依赖的第二个参数变成了一个空的数组，由于 JS 的静态作用域导致此函数内 的值 永远都不变
+- 使用 useRef 可以生成一个变量让其在组件每个生命周期内都能访问到
+- useCallback 是要配合子组件的 shouldComponentUpdate 或者 React.memo 一起来使用的，否则就是反向优化。
+- 可以将 useMemo 的返回值定义为返回一个函数这样就可以变通的实现了 useCallback
+
 [useEffect 完整指南](https://overreacted.io/zh-hans/a-complete-guide-to-useeffect/) ⭐
+
+- 每一次渲染都有它自己的 state、props、函数、effect。。。
+- class 组件中 setState 的运行方式和函数式组件的不同，多次放在`setTimeout`中调用的情况
+- 组件内的每一个函数（包括事件处理函数，effects，定时器或者 API 调用等等）会捕获定义它们的那次渲染中的 props 和 state
+- **顺序：**浏览器绘制后渲染、运行上一次的清除 effectReact、运行本次的 effect（大多数 effects 并不会阻塞屏幕的更新）
+- 为什么有时候在 effect 里拿到的是旧的 state 或 prop 呢？Effect 拿到的总是定义它的那次渲染中的 props 和 state。
+- 有时候你可能想在 effect 的回调函数里读取最新的值而不是捕获的值。最简单的实现方法是使用 refs
+- 那 Effect 中的清理，本质上，它的目的是消除副作用（effect)，比如取消订阅。
+- **同步的**概念，每一次渲染有自己的值，希望看到的是**最终结果**
+- `effect、usememo、usecallback`依赖项,**函数**作为依赖项
+  - setState 中传递函数，减少依赖项的传递，找到更新的**最小状态**
+  - 减少间接依赖，把函数用`usecallback`包裹，然后作为依赖项
+  - `eslint-plugin-react-hooks` 插件的`exhaustive-depslint`规则
+- useReducer 的使用，React 会保证 dispatch 在组件的声明周期内保持不变。它会在下一次渲染中再次调用 reducer（最新，可以使用 props，但是不建议）
+- 竟态，通过设置标志位解决
 
 [深入浅出 React Hooks](https://juejin.im/post/6844903858662014983#heading-24)
 
 [「react 进阶」一文吃透 react-hooks 原理](https://juejin.cn/post/6944863057000529933)
 
-[在 React 项目中全量使用 Hooks](https://juejin.im/post/6844904093824073742)
+[Hooks FAQ](https://reactjs.org/docs/hooks-faq.html) ⭐
 
-### 其他
+### api
 
-[谈谈 React 事件机制和未来(react-events)](https://zhuanlan.zhihu.com/p/78669634)
+[React 全部 api 解读+基础实践大全](https://juejin.cn/post/6950063294270930980)
 
-> 事件委托、合成事件、触发优先级
-
-自定义事件系统原因：
-
-- 抹平浏览器之间的兼容性差异
-- 事件‘合成’, 即事件自定义
-- 抽象跨平台事件机制
-- React 打算做更多优化,React 需要自己模拟一套事件冒泡的机制
-- React 打算干预事件的分发
-
-[React 中组件间通信的几种方式](https://www.jianshu.com/p/fb915d9c99c4)
-
-[TypeScript 在 React 中使用总结](https://juejin.im/post/6844903684422254606#heading-2)⭐
+### refs
 
 [你想知道的关于 Refs 的知识都在这了](https://juejin.im/post/6844903982725349390#heading-5)⭐
 
-[React 16.x 折腾记 - (1) React Router V4 和 antd 侧边栏的正确关联及动态 title 的实现](https://juejin.im/post/5b6be6c7e51d4519044ad684)
+[从一个需求出发，聊聊 useRef 三兄弟](https://juejin.im/post/6888616874171432973)
+
+### 组件通信
+
+[React 中组件间通信的几种方式](https://www.jianshu.com/p/fb915d9c99c4)
 
 [聊一聊我对 React Context 的理解以及应用](https://juejin.im/post/5a90e0545188257a63112977)
 
-[从一个需求出发，聊聊 useRef 三兄弟](https://juejin.im/post/6888616874171432973)
+### 其他
+
+[函数式组件与类组件有何不同？
+](https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/)
+[How to fetch data with React Hooks?
+](https://www.robinwieruch.de/react-hooks-fetch-data)
+[React as a UI Runtime](https://overreacted.io/react-as-a-ui-runtime/)
+[聊一聊我对 React Context 的理解以及应用](https://juejin.im/post/5a90e0545188257a63112977)
+[聊一聊我对 React Context 的理解以及应用](https://juejin.im/post/5a90e0545188257a63112977)
+
+## 深入原理
+
+[谈谈 React 事件机制和未来(react-events)](https://zhuanlan.zhihu.com/p/78669634)
+
+- 事件委托、合成事件、触发优先级
+- 自定义事件系统原因：
+  - 抹平浏览器之间的兼容性差异
+  - 事件‘合成’, 即事件自定义
+  - 抽象跨平台事件机制
+  - React 打算做更多优化,React 需要自己模拟一套事件冒泡的机制
+  - React 打算干预事件的分发
 
 ## 性能优化
 
-[React 性能优化完全指南，将自己这几年的心血总结成这篇！](https://mp.weixin.qq.com/s/p4MGOhEa5MoGMU1MscjAJw)
+[React 性能优化完全指南，将自己这几年的心血总结成这篇！](https://juejin.cn/post/6935584878071119885)
 
 [React 性能优化大挑战：一次理解 Immutable data 跟 shouldComponentUpdate](https://mp.weixin.qq.com/s/oxy3yXipelNKYKi7t2KbeA)
 
@@ -101,6 +146,32 @@
 
 ## 项目
 
+### 项目实践
+
+[React 16.x 折腾记 - (1) React Router V4 和 antd 侧边栏的正确关联及动态 title 的实现](https://juejin.im/post/5b6be6c7e51d4519044ad684)
+
+[TypeScript 在 React 中使用总结](https://juejin.im/post/6844903684422254606#heading-2)⭐
+
+- 内部移动端聊天项目（问题记录）
+
+  - hook 的写法，哪些变量应该放到`useRef`中，那个可以直接声明，尤其`new`出来的对象
+  - websocket 在开发环境，路径不能只是，会与 wds(webpack dev server)产生冲突？
+  - 功能尽量拆分出单独的方法，调用方法
+
+- 做一个项目，开始时做设计，结束做总结：
+  - 项目中用到的技术点，组件
+  - 开发中可能遇到的技术难点
+  - 整体的项目结构，工程化需要用到的工具
+  - 会用到哪些组件、手写还是引用第三方开源
+  - 工具方法的提炼，也可以写成 hook 的形式
+  - CSS 的组织，需要用到哪些变量
+  - hooks(useState,useEffect,useRef...)只能用到函数式组件的内部，或者自定义 hook 中
+  - 可以通过路由组织页面结构
+  - 完成后总结遇到的问题，进度慢的原因，避免边做边想，陷入细节，做的过程中发现方向性问题
+  -
+
+### 开源项目
+
 - [react-admin，marmelab 定制化的后台管理系统。](https://marmelab.com/react-admin/Readme.html)
 
   - layout
@@ -132,21 +203,10 @@
 
   - [开发文档](https://developers.mattermost.com/contribute/getting-started/)
 
-- 内部移动端聊天项目（问题记录）
-  - hook 的写法，哪些变量应该放到`useRef`中，那个可以直接声明，尤其`new`出来的对象
-  - websocket 在开发环境，路径不能只是，会与 wds(webpack dev server)产生冲突？
-  - 功能尽量拆分出单独的方法，调用方法
-
-* 做一个项目，开始时做设计，结束做总结：
-  - 项目中用到的技术点，组件
-  - 开发中可能遇到的技术难点
-  - 整体的项目结构，工程化需要用到的工具
-  - 会用到哪些组件、手写还是引用第三方开源
-  - 工具方法的提炼，也可以写成 hook 的形式
-  - CSS 的组织，需要用到哪些变量
-  - hooks(useState,useEffect,useRef...)只能用到函数式组件的内部，或者自定义 hook 中
-  - 可以通过路由组织页面结构
-  - 完成后总结遇到的问题，进度慢的原因，避免边做边想，陷入细节，做的过程中发现方向性问题
+- [A web-based notes app for developers.](https://github.com/taniarascia/takenote)
+  - typescript
+  - testing-library-react
+  - cypress
   -
 
 ## 面试题
@@ -159,20 +219,19 @@
 
 ## 组件库
 
-- https://github.com/brillout/awesome-react-components
-- https://ant.design/index-cn
-- https://mobile.ant.design/index-cn
-- https://rn.mobile.ant.design/index-cn
-- https://github.com/styled-components/styled-components
-- https://github.com/react-bootstrap/react-bootstrap
-- https://material-ui.com/zh/
-- https://github.com/elemefe/element-react
-
-[react-component](https://github.com/react-component?type=source)
-
-- ant-design 在 react-component 组件之上包装一层，加上一些公用的属性，如`size`,`diriction`,`position`等
-
-[react 组件库](https://github.com/brillout/awesome-react-components#ui-navigation)
+- 开源组件库
+  - https://github.com/brillout/awesome-react-components
+  - https://ant.design/index-cn
+  - https://mobile.ant.design/index-cn
+  - https://rn.mobile.ant.design/index-cn
+  - https://github.com/styled-components/styled-components
+  - https://github.com/react-bootstrap/react-bootstrap
+  - https://material-ui.com/zh/
+  - https://github.com/elemefe/element-react
+  - [react 组件库,awesome-react-components](https://github.com/brillout/awesome-react-components)
+  - [antd 的基础库，react-component](https://github.com/react-component?type=source)
+    - ant-design 在 react-component 组件之上包装一层，加上一些公用的属性，如`size`,`diriction`,`position`等
+    -
 
 ### checkbox
 
@@ -281,3 +340,28 @@
 [React Tips (2) - Reselect](https://zhuanlan.zhihu.com/p/29415032)
 
 [Immutable.js 与 React,Redux 及 reselect 的实践](https://zhuanlan.zhihu.com/p/29370325)
+
+## 视频中的知识点
+
+- [mksz428 - React+TypeScript 高仿 AntDesign 开发企业级 UI 组件库](https://coding.imooc.com/class/428.html)
+  - typescript
+    - ts-node,工具
+    - 鸭子类型，意思是主要叫的像鸭子就把他当做鸭子
+    - class 类的概念，修饰符`private`,`public`,`protect`,`readonly`,`static`
+    - `typescript`目录，查看文件`/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/extensions/node_modules/typescript/lib`
+    - `lib.dom.d.ts`,`lib.es5.d.ts`文件分别定义了 DOM 相关类型，方法和各种类型等
+    - 继承`extends`,实现`implements`
+    - 常量枚举的概念，提高性能
+    - **泛型约束**，`extends`
+    - 接口`interface`
+    - 类型别名`type`,类型断言`as`,`(str as string).length`,`(<string>str).length`
+    - 声明文件`declare`,`declare var jQuery`
+  - react
+    - `npx create-react-app demo-app`
+    - `node_modules/.bin/mocha`在`.bin`文件夹中执行相应的命令，执行时把`.bin`加入系统变量`PATH`,执行完删除
+  - 组件起步
+    - 通过 CSS 类名去应用样式，比直接 inline 样式性能要好
+    - 定义 sass 通用样式，颜色、字体、边框、圆角。色彩体系、字体体系等
+    - 定义 sass 通用方法 mixin，一组 CSS 属性在不同状态下时很有用
+    - `normalize.css`统一各个浏览器的通用样式，添加基础样式
+    - 原生 button 属性很多，可以继承已经写好的 interface，然后在这个基础上扩展

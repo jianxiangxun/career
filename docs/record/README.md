@@ -7,17 +7,17 @@
 
 # 技术栈
 
-- 基础：熟练掌握 JavaScript、ES6、Typescript、CSS、HTTP 等核心基础知识
+- 基础：
+  - 熟练掌握 JavaScript、ES6、Typescript、CSS、HTTP 等核心基础知识
 - 框架：熟练运用 React、React-native、Vue、Uniapp 等框架进行开发工作
   - React 项目开发, react/react-native + redux/dva + react-router/react-navigation + immutable + axios + sass
   - React 组件开发, react + hooks + typescript + jest + enzyme
   - Vue 项目开发, vue + vuex + vue-router + element-ui + axios + postcss + sass
-- 工程化: 了解 webpack 的配置方式,熟练使用 create-react-app 进行项目搭建,根据具体项目在 cra 上进行扩展。
-
-  - 掌握 babel、eslint、typecript、jest 的配置使用方式
-  -
-
-- 工具：熟练使用 Vscode、Git 等进行日常开发工作
+- 工程化:
+  - 了解 webpack 的配置方式,熟练使用 create-react-app 进行项目搭建,根据具体项目在 cra 上进行扩展。
+  - 掌握常用工具如 babel、eslint、typecript、jest 的配置使用方式
+  - 掌握常用 loader、plugin 的配置使用方式
+- 工具：熟练使用 Vscode、Git、Charles 等进行日常开发工作
 - 后端：了解 Node|Java
 
 # 工作经历
