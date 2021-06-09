@@ -51,6 +51,15 @@
 
 [React 全部 api 解读+基础实践大全](https://juejin.cn/post/6950063294270930980)
 
+- 组件类、工具类、hook 类、DOM 类
+- forwardRef、lazy、suspense、profiler、strictMode
+- createElement、cloneElement、isValidElement、Children 系列
+- hooks
+  - useEffect 执行顺序: 组件更新挂载完成 -> 浏览器 dom 绘制完成 -> 执行 useEffect 回调。
+  - useLayoutEffect 执行顺序: 组件更新挂载完成 -> 执行 useLayoutEffect 回调-> 浏览器 dom 绘制完成。
+  - useImperativeHandle,自定义通过 ref 获取的内容，如各种方法。
+- createPortal、flushSync
+
 ### refs
 
 [你想知道的关于 Refs 的知识都在这了](https://juejin.im/post/6844903982725349390#heading-5)⭐
@@ -65,13 +74,21 @@
 
 ### 其他
 
-[函数式组件与类组件有何不同？
-](https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/)
-[How to fetch data with React Hooks?
-](https://www.robinwieruch.de/react-hooks-fetch-data)
+[漫谈 React 异步组件前世与今生](https://juejin.cn/post/6970845778713509919)
+
+- componentDidCatch,子组件有异常时捕获错误,called during the “commit” phase,提交阶段
+- 异步组件
+  - 异步模式：请求数据-> 渲染组件。
+  - 传统模式：渲染组件-> 请求数据 -> 再渲染组件。
+- suspense 原理，在 componentDidCatch 中捕获异常，更改状态应用 fallback,reslove 后渲染组件
+- lazy 原理，通过抛出异常阻止同步组件渲染，lazy 返回一个 promise，pending 阶段抛出异常并返回一个对象，resolve 后在渲染组件
+- [relay](https://relay.dev/docs/getting-started/step-by-step-guide/)
+
+[函数式组件与类组件有何不同？](https://overreacted.io/zh-hans/how-are-function-components-different-from-classes/)
+
+[How to fetch data with React Hooks?](https://www.robinwieruch.de/react-hooks-fetch-data)
+
 [React as a UI Runtime](https://overreacted.io/react-as-a-ui-runtime/)
-[聊一聊我对 React Context 的理解以及应用](https://juejin.im/post/5a90e0545188257a63112977)
-[聊一聊我对 React Context 的理解以及应用](https://juejin.im/post/5a90e0545188257a63112977)
 
 ## 深入原理
 
@@ -360,8 +377,19 @@
     - `npx create-react-app demo-app`
     - `node_modules/.bin/mocha`在`.bin`文件夹中执行相应的命令，执行时把`.bin`加入系统变量`PATH`,执行完删除
   - 组件起步
-    - 通过 CSS 类名去应用样式，比直接 inline 样式性能要好
-    - 定义 sass 通用样式，颜色、字体、边框、圆角。色彩体系、字体体系等
-    - 定义 sass 通用方法 mixin，一组 CSS 属性在不同状态下时很有用
+    - 通过 `CSS` 类名去应用样式，比直接 `inline` 样式性能要好
+    - 定义 `sass` 通用样式，颜色、字体、边框、圆角。色彩体系、字体体系等
+    - 定义 `sass` 通用方法 `mixin`，一组 `CSS` 属性在不同状态下时很有用
     - `normalize.css`统一各个浏览器的通用样式，添加基础样式
-    - 原生 button 属性很多，可以继承已经写好的 interface，然后在这个基础上扩展
+    - 原生`button`属性很多，可以继承已经写好的`interface`，然后在这个基础上扩展
+  - storybook
+    - [测试、部署工具](https://www.chromatic.com/start)
+    - storybook 的各种插件，对各种工具的支持，如 addon-info、react-docgen、jsdoc
+    - storybook 的配置，webpack 处理特定的文件格式
+    - 装饰器、全局装饰器
+    - 使用 typescript，对应在 webpack 做配置以解析`ts`,`tsx`文件
+    - stories 默认导出中包括 component,title,decorator 等,`Template.bind({})`
+    - 快照测试,`snap test`,`@storybook/addon-storyshots`
+    - 自动化测试，结合`testing-library/react`,`@storybook/testing-react`
+    - 容器组件，react-redux 连接容器组件，获取数据，用 mock 数据包装展示组件
+    - Controls
