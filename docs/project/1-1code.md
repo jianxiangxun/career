@@ -49,3 +49,54 @@ create-react-app 中的使用：
 [那些年错过的 React 组件单元测试（上）](https://juejin.cn/post/6943430853972852750)
 
 [那些年错过的 React 组件单元测试（下）](https://juejin.cn/post/6946008649026240519)
+
+### jest
+
+[]()
+
+- test 方法和 expect 方法的原理，expect 抛出异常，test 捕获异常
+- `npx jest init`,`jest.config.js`
+- 配置`babelrc`使用 es6 语法，`babel-env`,转换成哪个环境识别的代码
+- jest 集成了插件`babel-jest`，首先根据`babelrc`的内容进行转换，然后运行
+- 匹配器，tobe...
+  - testing-library/jest-dom,**扩充**匹配 dom 的 matcher
+  - `expect.xxxContainiing`
+  - `toEqual`类似于==，判断内容是否相等
+  - `.not`
+  - `toHaveBeenCalled`
+  - `toMatch`
+  - `resolves`
+  - `rejects`
+  - `toThrow`测试抛出异常
+  - `toBe`类似于===或者 object.is
+- 命令行启动 vscode
+- watch 模式下的各种参数，如`-o`只运行在 Git 下有变化的文件
+- test.only 只运行一个测试用例，忽略其他
+- 测试异步代码
+  - done
+  - return promise
+  - expect.assertions(1)，必须要有指定个数的 expect 被执行
+  - resolves、rejects
+  - async、await
+- mock
+  - .mock(calls、results、instance)
+  - mock return value
+  - mock Implementations
+  - mock module，`jest.mock('axios');`
+  - `__mocks__`模拟返回自定义的 mock function,`jest.mock(xxx)`
+  - `jest.requireActual`返回真实函数，调过使用模拟函数
+- 快照测试
+  - toMatchSnapshot
+  - Property Matchers,匹配变化的内容如时间，`expect.any(Date)`
+  - Inline Snapshots
+- timer
+  - `jest.useFakeTimers()`
+  - `jest.useRealTimers();`
+  - `jest.runAllTimers();`
+  - `jest.runOnlyPendingTimers();`运行 pending 中的 timer
+  - `jest.advanceTimersByTime(1000);`快进时间
+- mock es6 module
+  - 假设 xxx 中方法很复杂，jest.mock(xxx)自动把 xxx 构造函数和方法替换成 jest.fn
+  - **单元测试只关注本身，不关注引用的函数、方法，会常用到 mock，忽略关联**
+  - 集成测试，对单元以及单元关联的内容都做测试
+  -

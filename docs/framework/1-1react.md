@@ -41,9 +41,13 @@
 - useReducer 的使用，React 会保证 dispatch 在组件的声明周期内保持不变。它会在下一次渲染中再次调用 reducer（最新，可以使用 props，但是不建议）
 - 竟态，通过设置标志位解决
 
-[深入浅出 React Hooks](https://juejin.im/post/6844903858662014983#heading-24)
+[玩转 react-hooks,自定义 hooks 设计模式及其实战](https://juejin.cn/post/6890738145671938062) ⭐
 
-[「react 进阶」一文吃透 react-hooks 原理](https://juejin.cn/post/6944863057000529933)
+- react 新增的钩子 API，目的是**增加代码的可复用性**，逻辑性，弥补无状态组件没有生命周期，没有数据管理状态 state 的缺陷。
+- hooks 专注的就是**逻辑复用**
+- 要特别～特别～特别关注的是**传进去什么**，**返回什么**
+
+[深入浅出 React Hooks](https://juejin.im/post/6844903858662014983#heading-24)
 
 [Hooks FAQ](https://reactjs.org/docs/hooks-faq.html) ⭐
 
@@ -92,6 +96,8 @@
 
 ## 深入原理
 
+[React 源码解析](https://react.jokcy.me/)
+
 [谈谈 React 事件机制和未来(react-events)](https://zhuanlan.zhihu.com/p/78669634)
 
 - 事件委托、合成事件、触发优先级
@@ -101,6 +107,47 @@
   - 抽象跨平台事件机制
   - React 打算做更多优化,React 需要自己模拟一套事件冒泡的机制
   - React 打算干预事件的分发
+
+[「react 进阶」一文吃透 react 事件系统原理](https://juejin.cn/post/6955636911214067720)
+
+- 什么是合成事件
+  - 我们绑定的事件 onClick 等，并不是原生事件，而是由原生事件合成的 React 事件，比如 click 事件合成为 onClick 事件。比如 blur , change , input , keydown , keyup 等 , 合成为 onChange。
+  - 将事件绑定在 document 统一管理，防止很多事件直接绑定在原生的 dom 元素上。
+  - React 想实现一个全浏览器的框架， 为了实现这种目标就需要提供全浏览器一致性的事件系统，以此抹平不同浏览器的差异。
+  - react 并不是一开始，把所有的事件都绑定在 document 上，而是采取了一种按需绑定，比如发现了 onClick 事件,再去绑定 document click 事件。
+- 事件初始化、事件合成
+  - **构建初始化 React 合成事件和原生事件的对应关系**
+- 事件绑定
+  - 根据对应管理，找到对应的原生事件，调用 addTrappedEventListener 绑定在 document 上
+  - 只有上述那几个特殊事件比如 scorll,focus,blur 等是在事件捕获阶段发生的，其他的都是在事件冒泡阶段发生的，无论是 onClick 还是 onClickCapture 都是发生在冒泡阶段
+- 事件触发
+  - dispatchEvent
+  - 通过 e.target 找到真实 DOM 元素
+  - 模拟事件冒泡
+
+[「源码解析 」这一次彻底弄懂 react-router 路由原理](https://juejin.cn/post/6886290490640039943)
+
+- react-router-dom 和 react-router 和 history 库三者关系
+- 单页面应用路由实现**原理**是，切换 url，监听 url 变化，从而渲染不同的页面组件。
+  - history、hash 通过 history.pushState、location.hash 改变 URL，通过 popstate、hashchange 事件监听
+- history
+  - 点击链接/push 方法 > 监听 > 触发 > setState > 通知 router
+- react-router
+  - Router,接收 location 变化，派发更新流， 作用是把 history location 等路由信息传递下去
+  - Switch-匹配正确的唯一的路由
+  - Route-组件页面承载容器，匹配 path,渲染组件。
+    - 作为路由组件的容器,可以根据将实际的组件渲染出来。
+    - 通过 RouterContext.Consume 取出当前上一级的 location,match 等信息。作为 prop 传递给页面组件。
+    - 使得我们可以在页面组件中的 props 中获取 location ,match 等信息。
+  - Redirect-没有符合的路由，那么重定向
+- 总结
+  - 当地址栏改变 url，组件的更新渲染都经历了什么？
+    - 拿 history 模式做参考。当 url 改变，首先触发 histoy，调用事件监听 popstate 事件， 触发回调函数 handlePopState，触发 history 下面的 setstate 方法。
+    - 产生新的 location 对象，然后通知 Router 组件更新 location 并通过 context 上下文传递，switch 通过传递的更新流，匹配出符合的 Route 组件渲染，最后有 Route 组件取出 context 内容，传递给渲染页面，渲染更新。
+  - 当我们调用 history.push 方法，切换路由，组件的更新渲染又都经历了什么呢？
+    - 我们还是拿 history 模式作为参考，当我们调用 history.push 方法，首先调用 history 的 push 方法，通过 history.pushState 来改变当前 url，接下来触发 history 下面的 setState 方法，接下来的步骤就和上面一样
+
+[「react 进阶」一文吃透 react-hooks 原理](https://juejin.cn/post/6944863057000529933)
 
 ## 性能优化
 
@@ -393,3 +440,15 @@
     - 自动化测试，结合`testing-library/react`,`@storybook/testing-react`
     - 容器组件，react-redux 连接容器组件，获取数据，用 mock 数据包装展示组件
     - Controls
+  - 组件测试
+    - 测试金字塔，单元测试、集成测试、e2e 测试的比重
+    - [jest-dom](https://github.com/testing-library/jest-dom),扩展 Tobe 语句，如`toBeInTheDocument`,`toHaveClass`
+    - `testing-library`中`fireEvent.click(element)`
+  - 组件
+    - menu 组件
+      - 先写组件的基本结构，在扩展功能。**自己写组件、阅读组件**也是先写基本功能，在扩展
+      - `await wait(()=>{})`
+      - **问题？？？**，创建样式文件控制元素显示隐藏
+    - upload 组件
+      - 测试异步组件、测试拖拽组件
+      - jest.mock()

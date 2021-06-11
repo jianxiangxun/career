@@ -6,7 +6,7 @@
 
 [那些你总是记不住但又总是要用的 css](https://juejin.im/post/6869659680496041991)
 
-[CSS 大全](https://css-tricks.com/almanac/)
+[css-tricks](https://css-tricks.com/almanac/)⭐
 
 [1.5 万字 CSS 基础拾遗（核心知识、常见需求）](https://mp.weixin.qq.com/s/fV5friirT_3Oemvaunjemw)
 
