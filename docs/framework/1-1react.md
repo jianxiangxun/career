@@ -92,9 +92,7 @@
 
 [How to fetch data with React Hooks?](https://www.robinwieruch.de/react-hooks-fetch-data)
 
-[React as a UI Runtime](https://overreacted.io/react-as-a-ui-runtime/)
-
-## 深入原理
+[React as a UI Runtime](https://overreacted.i## 深入原理
 
 [React 源码解析](https://react.jokcy.me/)
 
@@ -283,6 +281,19 @@
 
 ## 组件库
 
+- 组件分类
+  - 通用
+  - 展示数据
+  - 表单
+  - 反馈
+  - 导航
+- 复杂组件
+
+  - tree 树状结构
+  - table 表格
+  - datapicker 日期选择
+  - calendar 日历
+
 - 开源组件库
   - https://github.com/brillout/awesome-react-components
   - https://ant.design/index-cn
@@ -452,3 +463,13 @@
     - upload 组件
       - 测试异步组件、测试拖拽组件
       - jest.mock()
+  - 打包
+    - 通过 tsc 编译代码到指定版本，抽取出声明文件
+    - 入口文件，把所有组件导入到 index.ts 中，把所有样式文件导入到 index.scss 中
+    - npm link 生成软连接在本地引用
+    - eslint 配置，覆盖默认规则
+  - 发布
+    - package.json 中,files 字段,指定发布哪些文件夹
+    - 配置 Travis
+    - 配置 GitHub token
+    - 通过 husky，添加钩子

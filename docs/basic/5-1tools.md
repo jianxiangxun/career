@@ -10,3 +10,9 @@
   - 在`lint-staged`中对通过正则匹配的文件调用`Prettier --write`
 
 [vscode 配置](https://create-react-app.dev/docs/setting-up-your-editor)
+
+## iterm
+
+## postman
+
+## charles

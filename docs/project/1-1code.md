@@ -100,3 +100,19 @@ create-react-app 中的使用：
   - **单元测试只关注本身，不关注引用的函数、方法，会常用到 mock，忽略关联**
   - 集成测试，对单元以及单元关联的内容都做测试
   -
+- **改变 props 后，要重新获取 element**，`wrapper = mount(<App />)`
+- TDD/BDD、集成测试
+  - 优缺点
+- 异步测试
+  - ReactWrapper.update
+  - ReactWrapper.debug
+
+### testing-library
+
+- findBy 是异步的，是 waitFor+getBy 的组合
+- queryBy 查找不到返回 null
+
+### 练习
+
+- `fireEvent.change`不好使
+- 多使用`userEvent`代替
